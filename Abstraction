@@ -1,0 +1,22 @@
+package Abstraction;
+abstract class Hr{
+    abstract void project();
+
+    public void Dept(){
+        System.out.println("IT");
+    }
+}
+
+class Team extends Hr{
+    @Override
+    void project(){
+
+        System.out.println("Banking voice...");
+    }
+}
+public class Employee {
+    public static void main(String[] args) {
+        Team obj = new Team();
+        obj.project();
+    }
+}
