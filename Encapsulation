@@ -1,0 +1,52 @@
+package Encapsulation;
+
+public class Bank {
+
+    private int accountNumber;
+    private String accountHolderName;
+    private double Balance;
+
+    public void setaccountNumber(int accountNumber){
+        this.accountNumber = accountNumber;
+    }
+
+    public int getaccountNumber(){
+        return accountNumber;
+    }
+
+    public void setaccountHolderName(String accountHolderName){
+        this.accountHolderName = accountHolderName;
+    }
+
+    public String getaccountHolderName(){
+        return accountHolderName;
+    }
+
+    public void setBalance(double Balance) {
+        this.Balance = Balance;
+    }
+
+    public double deposit(double amount){
+        Balance = Balance + amount;
+        return Balance;
+    }
+
+    public double getBalance(){
+        return Balance;
+    }
+
+    public static void main(String[] args) {
+        Bank obj = new Bank();
+
+        obj.setaccountHolderName("Taruni");
+        obj.setaccountNumber(1234566);
+        obj.setBalance(25000.00);
+        obj.deposit(15000);
+
+
+        System.out.println("The account Holder name: "+obj.getaccountHolderName());
+        System.out.println("The account number: "+obj.getaccountNumber());
+        System.out.println("The total Balance : "+obj.getBalance());
+    }
+
+}
