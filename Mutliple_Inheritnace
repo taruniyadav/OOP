@@ -1,0 +1,45 @@
+package inheritance;
+
+//interfcae -1
+
+public interface Ball {
+    public void Throw();
+}
+
+//interface - 2
+
+public interface Bat {
+    public void Hit();
+}
+
+
+//interface - 3
+
+public interface Cricket extends Ball,Bat{
+
+    public void Throw();
+    public void Hit();
+}
+
+// class
+
+public class MultipleInheritance implements Cricket {
+    @Override
+    public void Hit() {
+        System.out.println("Hit to score");
+    }
+
+    @Override
+    public void Throw() {
+        System.out.println("Throw to get a wicket");
+    }
+
+ 
+
+    public static void main(String[] args) {
+        MultipleInheritance obj = new MultipleInheritance();
+        obj.Hit();
+        obj.Throw();
+    }
+}
+
